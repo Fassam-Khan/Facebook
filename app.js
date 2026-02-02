@@ -1,14 +1,7 @@
-const loginData = [
-    {
-        'email': 'muhammadfassam@gmail.com',
-        'password': '123'
-    }
-]
+localStorage.setItem("notLogin",JSON.stringify(""))
 
-localStorage.setItem(loginData)
+let notLog = JSON.parse(localStorage.getItem("notLogin"))
 
-let data = JSON.parse(localStorage.getItem("user"))
-
-if(data == null){
-    window.location.href = "/login"
+if(notLog == ""){
+    window.location.href = '/login'
 }
