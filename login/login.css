@@ -4,8 +4,8 @@
     align-items: center;
     max-width: 1024px;
     margin: auto;
-    margin-top: 60px;
     flex-wrap: wrap;
+    height: 100vh;
 
 }
 
@@ -137,4 +137,41 @@
 a{
     margin: auto;
     cursor: pointer;
+}
+footer{
+    background-color: white;
+    height: 150px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+footer a{
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .left-content{
+        padding: 0;
+        width: 100%;
+    }
+    .profile-card{
+        justify-content: start;
+    }
+    .right{
+        margin-bottom: 30px;
+    }
+    footer{
+        width: 100%;
+    }
+    
+    
 }
