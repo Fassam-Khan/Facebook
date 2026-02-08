@@ -1,0 +1,131 @@
+
+
+
+header{
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.logo img{
+    width: 100%;
+    object-fit: cover;
+}
+.search-box{
+    background-color: #f0f2f5;
+    border-radius: 30px;
+    height: 40px;
+    width: 250px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+.search-box i{
+    color: gray;
+}
+.search-box input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
+.left-head{
+    display: flex;
+    gap: 10px;
+}
+.head-icons{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.head-icons div{
+    width: 100px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+.head-icons div:hover{
+    background-color: #f2f4f7;
+    padding: 10px;
+    height: auto;
+    border-radius: 8px;
+}
+.head-icons i{
+    font-size: 22px;
+}
+
+.home-icon{                                                         
+    border-bottom: 2px solid #0866ff;
+    color: #0866ff;
+
+}
+.right-icons{
+    display: flex;
+    gap: 10px
+    ;
+}
+.right-icons div{
+    background-color: #f2f4f7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main{
+    max-width: 1600px;
+    margin: auto;
+}
+.container{
+    display: flex;
+    
+}
+.left-content{
+    background-color: red;
+    flex: 1;
+}
+.middle-content{
+    background-color: black;
+    width: 25%;
+    flex: 3;
+}
+.right-content{
+    flex: 1;
+}
+.container .left-content {
+    padding: 20px 10px;
+
+}
+.box{
+    display: flex;
+    border: 1px solid black;
+
+}
+.box .profile-img{
+    width: 40px;
+    height: 40px;
+
+}
+/* .profile-img img{
+    width: 100%;
+    object-fit: cover;
+} */
+
+
+
+
