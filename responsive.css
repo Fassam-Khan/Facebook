@@ -1,6 +1,7 @@
  @media screen and (max-width:768px) {
     header{
         display: flex;
+        width: 100%;
     }
     .search-box input{
         display: none;
@@ -12,36 +13,27 @@
     .head-icons{
         display: none;
     }
-    /* .mobile-header{
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        padding: 0 8px;
-        height: 100px;
-    }
-    .logo{
-        width: 140px;
-        margin-left: -10px;
-    }
-    .top-head{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-        background-color: gray;
-    }
-    .icons{
-        display: flex;                                                               ;
-    }
-    .plus{
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    } */
     
+    .left-content{
+        display: none;
+    }
+    .middle-content{
+        width: 100%;
+    }
+    .create-post-content{
+        width: 100%;
+        margin-top: 6px;
+    }
+    .create-post-btn{
+        width: 150px;
+        padding: 5px 10px;
+    }
+    .middle-post-content{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .right-content{
+        display: none;
+    }
  }
