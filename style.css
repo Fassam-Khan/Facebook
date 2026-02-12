@@ -1,6 +1,4 @@
 
-
-
 header{
     background-color: white;
     width: 100%;
@@ -96,13 +94,11 @@ main{
     
 }
 .left-content{
-    background-color: red;
     flex: 1;
 }
 .middle-content{
-    background-color: black;
-    width: 25%;
     flex: 3;
+    border: 1px solid purple;
 }
 .right-content{
     flex: 1;
@@ -121,10 +117,117 @@ main{
     height: 40px;
 
 }
+.left-content{
+    flex: 1;
+}
 /* .profile-img img{
     width: 100%;
     object-fit: cover;
 } */
+.profile-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("/assests/profile.jfif");
+    background-size: cover;
+}
+
+.profile-icon img{
+    width: 100%;
+
+}
+.boxes{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.middle-post-content{
+    padding: 0 60px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 800px;
+  
+}
+.create-post-content{
+    display: flex;  
+    background-color: white;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 10px;
+    gap: 10px;
+}
+.profile{
+    background-image: url("/assests/profile.jfif");
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.create-post-btn{
+    background-color: #f0f2f5;
+    width: 75%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+.post-icon{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+.post-icon:hover{
+    background-color: #f2f4f7;
+    cursor: pointer;
+}
+.story{
+    width: 130px;
+    height: 180px;
+    border-radius: 12px;
+    background-size: cover;
+    position: relative;
+    padding: 4px;
+}
+.story-title{
+    position: absolute;
+    bottom: 4px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    width: 90%;
+    text-align: start;
+    left: 6px;
+    padding: 0 5px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+.story-profile{
+    background-image: url("/assests/profile.jfif");
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.stories-box{
+    display: flex;
+    gap: 10px;
+}
+.story{
+    flex-wrap: nowrap;
+}
 
 
 
