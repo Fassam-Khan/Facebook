@@ -6,7 +6,6 @@ if(notLog == null){
 
 
 }
-localStorage.clear()
 
 const stories = [
     {
