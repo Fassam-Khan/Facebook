@@ -11,3 +11,12 @@ body{
 .hide{
     display: none;
 }
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.space{
+    gap: 5px;
+}
