@@ -62,7 +62,7 @@ const stories = [
 
   storyStyle.innerHTML += stories.map((story)=>{
     return `  <div class="story" style="background-image: url(${story.storyImage});">
-    <div class="story-profile">
+    <div class="story-profile" style="background-image: url(${story.profilePic});" >
     </div>
     <div class="story-title">
         <p>${story.username} </p>
