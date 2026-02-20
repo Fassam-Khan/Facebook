@@ -58,6 +58,67 @@ const stories = [
     }
   ];
 
+  const facebookPosts = [
+    {
+      id: 1,
+      title: "New Art Supplies Available 🎨",
+      description: "Explore our latest collection of premium art supplies. Perfect for beginners and professional artists.",
+      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f",
+      likes: 120,
+      comments: 25,
+      shares: 10,
+      date: "2026-02-20",
+      username: "Fassam"
+    },
+    {
+      id: 2,
+      title: "Sketching Essentials ✏️",
+      description: "High quality sketchbooks, pencils and charcoal now in stock. Order today!",
+      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      likes: 98,
+      comments: 18,
+      shares: 6,
+      date: "2026-02-18",
+      username: "Ali Khan"
+
+    },
+    {
+      id: 3,
+      title: "Acrylic Colors Sale 🔥",
+      description: "Get up to 20% OFF on selected acrylic paints. Limited time offer!",
+      image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+      likes: 210,
+      comments: 40,
+      shares: 22,
+      date: "2026-02-15",
+      username: "Sara Ahmed"
+    },
+    {
+      id: 4,
+      title: "Customer Artwork Feature 🖌️",
+      description: "Check out this amazing artwork made using our supplies. Tag us to get featured!",
+      image: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+      likes: 175,
+      comments: 30,
+      shares: 12,
+      date: "2026-02-12",
+      username: "Sara Ahmed"
+
+    },
+    {
+      id: 5,
+      title: "Watercolor Collection 💧",
+      description: "Premium watercolor sets now available. Perfect for landscapes and portraits.",
+      image: "https://images.unsplash.com/photo-1500534623283-312aade485b7",
+      likes: 134,
+      comments: 20,
+      shares: 8,
+      date: "2026-02-10",
+      username: "Sara Ahmed"
+
+    }
+  ];
+
   let storyStyle = document.getElementById("storiesBox")
   let postContainer = document.getElementById("postContainer")
 
@@ -72,14 +133,15 @@ const stories = [
 </div>`
   }).join("");
 
+const postHtml = (post)=>{
   postContainer.innerHTML += ` <div class="post-box">
   <div class="top-post-box">
       <div class="top-post-left-box">
           <div class="profile" style="background-image: url(/assests/profile.jfif);">
           </div>
           <div class="flex column" style="margin-left: 5px; justify-content: center;">
-              <p class="post-name">Muhammad Fassam</p>
-              <p class="date">01/2/2025 20:56pm</p>
+              <p class="post-name">${post.username}</p>
+              <p class="date">${post.date}</p>
           </div>
       </div>
       <div class="flex space">
@@ -93,18 +155,11 @@ const stories = [
   </div>
   <!-- Captions  -->
   <div class="post-caption">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum fugiat
-          similique
-          earum quo asperiores, aspernatur reprehenderit nisi sint aut corporis harum vel
-          laborum
-          sequi aliquid porro doloremque voluptas. Inventore et autem labore. Architecto
-          aspernatur eaque adipisci voluptates magnam deleniti sequi tenetur, molestias,
-          maiores
-          facilis minus ipsa, sunt ullam excepturi.</p>
+      <p>${post.description}</p>
   </div>
   <!-- Post Image  -->
   <div class="post-image"
-      style="background-image: url(https://picsum.photos/1080/1080?nature);">
+      style="background-image: url(${post.image});">
   </div>
   <div class="reactions-box">
       <div class="reactions">
@@ -114,8 +169,8 @@ const stories = [
                   class="fa-regular fa-heart"></i></div>
       </div>
       <div class="flex space" style="color: gray;">
-          <p>2 comments</p>
-          <p>1 share</p>
+          <p>${post.likes} comments</p>
+          <p>${post.shares} share</p>
 
       </div>
   </div>
@@ -126,3 +181,16 @@ const stories = [
       <div><i class="fa-solid fa-share"></i><span>Share</span></div>
   </div>
 </div>`
+
+}
+
+
+const createPost = ()=>{
+  let createPosts = facebookPosts.map((post)=>{
+    return postHtml(post)
+  })
+  
+}
+
+createPost()
+ 
