@@ -59,6 +59,7 @@ const stories = [
   ];
 
   let storyStyle = document.getElementById("storiesBox")
+  let postContainer = document.getElementById("postContainer")
 
   storyStyle.innerHTML += stories.map((story)=>{
     return `  <div class="story" style="background-image: url(${story.storyImage});">
@@ -69,4 +70,59 @@ const stories = [
     </div>
 
 </div>`
-  }).join("")
+  }).join("");
+
+  postContainer.innerHTML += ` <div class="post-box">
+  <div class="top-post-box">
+      <div class="top-post-left-box">
+          <div class="profile" style="background-image: url(/assests/profile.jfif);">
+          </div>
+          <div class="flex column" style="margin-left: 5px; justify-content: center;">
+              <p class="post-name">Muhammad Fassam</p>
+              <p class="date">01/2/2025 20:56pm</p>
+          </div>
+      </div>
+      <div class="flex space">
+          <div>
+              <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div>
+              <i class="fa-solid fa-x"></i>
+          </div>
+      </div>
+  </div>
+  <!-- Captions  -->
+  <div class="post-caption">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum fugiat
+          similique
+          earum quo asperiores, aspernatur reprehenderit nisi sint aut corporis harum vel
+          laborum
+          sequi aliquid porro doloremque voluptas. Inventore et autem labore. Architecto
+          aspernatur eaque adipisci voluptates magnam deleniti sequi tenetur, molestias,
+          maiores
+          facilis minus ipsa, sunt ullam excepturi.</p>
+  </div>
+  <!-- Post Image  -->
+  <div class="post-image"
+      style="background-image: url(https://picsum.photos/1080/1080?nature);">
+  </div>
+  <div class="reactions-box">
+      <div class="reactions">
+          <div class="like-react"><i class="fa-regular fa-thumbs-up"></i></div>
+          <div class="like-react"
+              style="background-color: red; margin-left: -4px; z-index: 0;"><i
+                  class="fa-regular fa-heart"></i></div>
+      </div>
+      <div class="flex space" style="color: gray;">
+          <p>2 comments</p>
+          <p>1 share</p>
+
+      </div>
+  </div>
+  <!-- likes comments and shares  -->
+  <div class="likes-comments-shares">
+      <div><i class="fa-regular fa-thumbs-up"></i> <span>Like</span></div>
+      <div><i class="fa-regular fa-comment"></i><span>Comments</span></div>
+      <div><i class="fa-solid fa-share"></i><span>Share</span></div>
+  </div>
+</div>`
