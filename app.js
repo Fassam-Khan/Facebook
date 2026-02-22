@@ -121,6 +121,11 @@ const stories = [
 
   let storyStyle = document.getElementById("storiesBox")
   let postContainer = document.getElementById("postContainer")
+  let closePop = document.getElementById("closePop")
+  let postPop = document.getElementById("create-post-popop")
+  
+
+  
 
   storyStyle.innerHTML += stories.map((story)=>{
     return `  <div class="story" style="background-image: url(${story.storyImage});">
@@ -183,8 +188,6 @@ const postHtml = (post)=>{
 </div>`
 
 }
-
-
 const createPost = ()=>{
   let createPosts = facebookPosts.map((post)=>{
     return postHtml(post)
@@ -193,4 +196,35 @@ const createPost = ()=>{
 }
 
 createPost()
+
+closePop.addEventListener("click",()=>{
+  postPop.style.display = "none"
+
+})
+
+
+const showPop = ()=>{
+  postPop.style.display = "flex"
+  
+}
+
+const submitHandler = (e)=>{
+  e.preventDefault()
+  let caption = document.getElementById("caption")
+  let image = document.getElementById("image")
+  postCaption = caption.value
+  postImage = image.value
+
+  const newPost = {
+    description: `${postCaption}`,
+    image: `${postImage}`,
+    likes: 0,
+    comments: 0,
+  }
+ postHtml(newPost)
+
+  
+ 
+
+}
  

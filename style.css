@@ -328,6 +328,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
   
 }
 .create-post-popop > form{
@@ -341,7 +342,55 @@ main{
     font-weight: bold;
     text-align: center;
 }
-
-
+.form-head{
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+    height: 40px;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.profile img{
+    width: 100%;
+    object-fit: cover;
+}
+.profile-post{
+    margin-top: 20px;
+}
+.profile-post{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.post-text textarea{
+    width: 100%;
+    padding: 20px 5px;
+    outline: none;
+    border: none;
+    height: 80px;
+}
+.post-text textarea::placeholder{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.post-submit{
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #0866ff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
 

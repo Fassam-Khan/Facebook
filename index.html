@@ -81,7 +81,8 @@
                     <!-- Creating post box  -->
                     <div class="create-post-content">
                         <div class="profile"></div>
-                        <button class="create-post-btn">What's on your mind, Muhammad?</button>
+                        <button id="createPost" class="create-post-btn" onclick="showPop()">What's on your mind,
+                            Muhammad?</button>
                         <div class="post-icon">
                             <i class="fa-solid fa-video"></i>
                         </div>
@@ -107,18 +108,37 @@
                     </div>
                     <!-- Show Post Box  -->
                     <div class="post-container" id="postContainer">
-                       
-                    <!-- Post Dynamic Here  -->
+
+                        <!-- Post Dynamic Here  -->
                     </div>
                 </div>
             </div>
 
             <!-- Create Post Container  -->
-            <div class="create-post-popop">
-                <form >
-                    <div>
+            <div class="create-post-popop" id="create-post-popop">
+                <form onsubmit="submitHandler(event)">
+                    <div class="form-head">
                         <p class="heading">Create Post</p>
+                        <div class="close" id="closePop">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
                     </div>
+                    <!-- Middle Content  -->
+                    <div class="profile-post">
+                        <div class="profile-icon">
+                        </div>
+                        <p>Muhammad Fassam</p>
+                    </div>
+
+                    <!-- Ceate Post Text  -->
+                    <div class="post-text">
+                        <textarea name="" id="caption" placeholder="What's on your mind, Muhammad?"></textarea>
+                    </div>
+                    <!-- Img Upload  -->
+                    <div>
+                        <input type="text" placeholder="Enter image link" style="width: 100%;" id="image">
+                    </div>
+                    <button class="post-submit">Post</button>
                 </form>
 
             </div>
