@@ -78,6 +78,7 @@ const stories = [
   let closePop = document.getElementById("closePop")
   let postPop = document.getElementById("create-post-popop")
   let currentUserData = JSON.parse(localStorage.getItem("notLogin"))
+  let createPostBtn = document.getElementById("createPost")
 
 
   
@@ -147,7 +148,7 @@ const postHtml = (post)=>{
 }
 const createPost = ()=>{
   let postFromLS = JSON.parse(localStorage.getItem("posts"))
-  let createPosts = postFromLS.map((post)=>{
+  let createPosts = postFromLS?.map((post)=>{
     return postHtml(post)
   })
   
@@ -159,12 +160,13 @@ closePop.addEventListener("click",()=>{
   postPop.style.display = "none"
 
 })
-
-
 const showPop = ()=>{
   postPop.style.display = "flex"
   
 }
+
+createPostBtn.addEventListener("click", showPop)
+
 
 const submitHandler = (e)=>{
   e.preventDefault()
