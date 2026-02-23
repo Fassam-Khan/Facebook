@@ -12,7 +12,7 @@ const login = ()=>{
         if(element.email == email.value && element.password == password.value){
             alert("Login Successfully")
             notLog = JSON.parse(localStorage.getItem("notLogin") || [])
-            localStorage.setItem("notLogin",JSON.stringify(email.value))
+            localStorage.setItem("notLogin",JSON.stringify(element))
             window.location.href = "/"
             
         }
