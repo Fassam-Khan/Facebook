@@ -79,8 +79,7 @@ const stories = [
   let postPop = document.getElementById("create-post-popop")
   let currentUserData = JSON.parse(localStorage.getItem("notLogin"))
 
-  const facePosts = localStorage.setItem("Posts",JSON.stringify(facebookPosts))
-  console.log(facePosts)
+
   
 
   
@@ -147,7 +146,8 @@ const postHtml = (post)=>{
 
 }
 const createPost = ()=>{
-  let createPosts = facebookPosts.map((post)=>{
+  let postFromLS = JSON.parse(localStorage.getItem("posts"))
+  let createPosts = postFromLS.map((post)=>{
     return postHtml(post)
   })
   
@@ -173,6 +173,8 @@ const submitHandler = (e)=>{
   postCaption = caption.value
   postImage = image.value
 
+  const posts = JSON.parse(localStorage.getItem("posts")) || [];
+
   if(postCaption.trim() == "" ){
     alert("Please enter a caption for your post")
   }
@@ -186,12 +188,18 @@ const submitHandler = (e)=>{
     date: new Date().toLocaleDateString(),
     shares: 0
   }
- postHtml(newPost)
+posts.unshift(newPost)
 
  caption.value = "";
  image.value = "";
  postPop.style.display = "none"
 
+
+
+
+localStorage.setItem("posts",JSON.stringify(posts))
+
+createPost()
  
 
   
