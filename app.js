@@ -147,9 +147,57 @@ const postHtml = (post)=>{
 
 }
 const createPost = ()=>{
+  postContainer.innerHTML = ""
   let postFromLS = JSON.parse(localStorage.getItem("posts"))
+  console.log(postFromLS)
   let createPosts = postFromLS?.map((post)=>{
-    return postHtml(post)
+    return   postContainer.innerHTML += ` <div class="post-box">
+    <div class="top-post-box">
+        <div class="top-post-left-box">
+            <div class="profile" style="background-image: url(/assests/profile.jfif);">
+            </div>
+            <div class="flex column" style="margin-left: 5px; justify-content: center;">
+                <p class="post-name">${post.username}</p>
+                <p class="date">${post.date}</p>
+            </div>
+        </div>
+        <div class="flex space">
+            <div>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-x"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Captions  -->
+    <div class="post-caption">
+        <p>${post.description}</p>
+    </div>
+    <!-- Post Image  -->
+    <div class="post-image"
+        style="background-image: url(${post.image});">
+    </div>
+    <div class="reactions-box">
+        <div class="reactions">
+            <div class="like-react"><i class="fa-regular fa-thumbs-up"></i></div>
+            <div class="like-react"
+                style="background-color: red; margin-left: -4px; z-index: 0;"><i
+                    class="fa-regular fa-heart"></i></div>
+        </div>
+        <div class="flex space" style="color: gray;">
+            <p>${post.likes} comments</p>
+            <p>${post.shares} share</p>
+  
+        </div>
+    </div>
+    <!-- likes comments and shares  -->
+    <div class="likes-comments-shares">
+        <div><i class="fa-regular fa-thumbs-up"></i> <span>Like</span></div>
+        <div><i class="fa-regular fa-comment"></i><span>Comments</span></div>
+        <div><i class="fa-solid fa-share"></i><span>Share</span></div>
+    </div>
+  </div>`
   })
   
 }
@@ -191,21 +239,13 @@ const submitHandler = (e)=>{
     shares: 0
   }
 posts.unshift(newPost)
-
  caption.value = "";
  image.value = "";
  postPop.style.display = "none"
 
-
-
-
 localStorage.setItem("posts",JSON.stringify(posts))
-
 createPost()
- 
 
-  
- 
 
 }
  
