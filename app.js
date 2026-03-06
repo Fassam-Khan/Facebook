@@ -127,19 +127,17 @@ const postHtml = (post) => {
   <div class="reactions-box">
       <div class="reactions">
           <div class="like-react"><i class="fa-regular fa-thumbs-up"></i></div>
-          <div class="like-react"
-              style="background-color: red; margin-left: -4px; z-index: 0;"><i
-                  class="fa-regular fa-heart"></i></div>
+        <span class="post-likes">${post.likes}</span>
       </div>
       <div class="flex space" style="color: gray;">
-          <p>${post.likes} comments</p>
+          <p>${post.comments} comments</p>
           <p>${post.shares} share</p>
 
       </div>
   </div>
   <!-- likes comments and shares  -->
   <div class="likes-comments-shares">
-      <div><i class="fa-regular fa-thumbs-up"></i> <span>Like</span></div>
+      <div onclick="postLike(${post.likes})"><i class="fa-regular fa-thumbs-up"></i> <span>Like</span></div>
       <div><i class="fa-regular fa-comment"></i><span>Comments</span></div>
       <div><i class="fa-solid fa-share"></i><span>Share</span></div>
   </div>
@@ -154,6 +152,13 @@ const createPost = () => {
   })
 
 }
+
+const postLike = (likes)=>{
+    return { ...likes, likes:likes + 1 }     
+  
+
+}
+
 
 createPost()
 

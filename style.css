@@ -100,14 +100,20 @@ main{
     position: fixed;
     top: 60px;
     left: 0;
-    width: 250px; 
     height: 100vh;
+    border: 1px solid black;
+    flex: 1;
 }
 .middle-content{
     flex: 3;
 }
 .right-content{
     flex: 1;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: 100vh;
+    border: 1px solid black;
 }
 .container .left-content {
     padding: 20px 10px;
@@ -139,6 +145,12 @@ main{
     background-image: url("/assests/profile.jfif");
     background-size: cover;
 }
+.post-likes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+}
 
 .profile-icon img{
     width: 100%;
@@ -151,11 +163,17 @@ main{
     background-color: transparent;
     font-weight: 600;
     font-size: 14px;
+    padding: 5px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.boxes:hover{
+    background-color: #bec0c4;
 }
 .menu-list{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
 }
 .middle-post-content{
     padding: 0 60px;
