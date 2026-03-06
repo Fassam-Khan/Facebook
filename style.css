@@ -9,6 +9,9 @@ header{
     position: relative;
     padding: 0 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 .logo{
     width: 40px;
@@ -94,7 +97,11 @@ main{
     
 }
 .left-content{
-    flex: 1;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px; 
+    height: 100vh;
 }
 .middle-content{
     flex: 3;
@@ -118,6 +125,8 @@ main{
 }
 .left-content{
     flex: 1;
+    position: sticky;
+    height: 100vh;
 }
 /* .profile-img img{
     width: 100%;
@@ -305,7 +314,7 @@ main{
     border-radius: 2px;
     padding: 6px 0;
     cursor: pointer;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 
 }
 .likes-comments-shares div:hover{
