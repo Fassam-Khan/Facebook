@@ -116,6 +116,7 @@ main{
     height: 100vh;
     border: 1px solid black;
     padding: 10px;
+    max-width: 280px;
 }
 .container .left-content {
     padding: 20px 10px;
@@ -430,5 +431,26 @@ main{
 }
 .boxes :nth-child(2){
     width: auto;
+}
+.sponser-img{
+    border-radius: 12px;
+    background-image: url("https://scontent.fkhi16-2.fna.fbcdn.net/v/t45.1600-4/649603004_896903123215879_4151118558603479822_n.jpg?stp=dst-jpg_s526x296_tt6&_nc_cat=102&ccb=1-7&_nc_sid=526594&_nc_eui2=AeG9rR2Du69vziL7xcY7S1LFpdkQ6hXt1wSl2RDqFe3XBNCGfjEz-VGBYMSwAy5tc-qkP8VkhMUrVBi-UheK4oai&_nc_ohc=hkIVpyWZYtwQ7kNvwFewB0N&_nc_oc=AdnkEocB6-PJm5E6_pBYxklwkFU3aGO6BD9mY1zr5-9YguX5LIwpMXrpQ3n4bjlPM1A&_nc_zt=1&_nc_ht=scontent.fkhi16-2.fna&_nc_gid=i1mFMhhaqfrpD6geHeDLyQ&_nc_ss=8&oh=00_AfyVgPr_cICXkzdU4D65dBAMnJZURiHze6bfu3vSirQydQ&oe=69BCCB44");
+    width: 280px;
+    height: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sponser-box{
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+.sponser-box:hover{
+    background-color: #f2f4f725;
+    /* padding: 10px; */
+   
+}
+.sponser{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.253);
 }
 
