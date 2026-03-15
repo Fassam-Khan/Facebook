@@ -112,10 +112,16 @@ main{
     position: sticky;
     top: 60px;
     right: 0;
-    height: 100vh;
     padding: 10px;
-    max-width: 280px;
+    width: 250px;
+    height: 550px;
+ 
+    
 }
+.right-content:hover{
+    overflow: auto;
+}
+
 .container .left-content {
     padding: 20px 10px;
 
@@ -441,6 +447,7 @@ main{
 .sponser-box{
     margin-top: 10px;
     cursor: pointer;
+    width: 250px;
 
 }
 .sponser-box:hover{
@@ -450,5 +457,21 @@ main{
 }
 .sponser{
     border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+}
+.frind-pro{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.friend-box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+.frind-pro img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
 }
 
